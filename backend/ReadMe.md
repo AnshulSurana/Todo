@@ -4,6 +4,7 @@ This Project contains Node API for Epilot Todo App. This service connects with t
 exported public trello APIs.
 
 ##Github
+https://github.com/AnshulSurana/Todo.git
 
 ## Author
 Anshul Surana - surana.anshul@gmail.com
@@ -13,6 +14,12 @@ Anshul Surana - surana.anshul@gmail.com
  - NPM >= 8
  - Either, access to Epilot-Todo board on trello, or a new configured trello board with
   appkey, appname and board name.
+   
+## Reference Documentation 
+  - Trello - https://developer.atlassian.com/cloud/trello/rest/api-group-actions/
+  - Express - https://expressjs.com/en/4x/api.html
+  - Node - https://nodejs.org/dist/latest-v18.x/docs/api/
+  - and https://developer.mozilla.org/en-US/
 
 ## Building and Running
     npm install
