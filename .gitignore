@@ -11,5 +11,8 @@
 /frontend/__tests__
 
 /backend/build
+
 /backend/node_modules/
 /frontend/node_modules/
+
+/.idea/
