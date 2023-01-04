@@ -1,0 +1,13 @@
+./backend/node_modules
+./frontend/node_modules
+
+./backend/coverage
+./frontend/coverage
+
+./backend/.idea
+./frontend/.idea
+
+./backend/__tests__
+./frontend/__tests__
+
+./backend/build
