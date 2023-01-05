@@ -8,7 +8,7 @@ export const GridComponent = styled.div`
 export const FlexComponent = styled.div`
     display: flex;
     align-items: center;
-    max-width: 1200px;
+    justify-content: center;
     height: 95vh;
 `;
 
@@ -56,7 +56,7 @@ export const G3R1 = styled.div`
 export const LabelStyle = styled.div`
     margin: 10px;
     font-size: 15px;
-    width: 20%;
+    align-self: center;
     letter-spacing: 0px;
     font-weight: 600;
 `;
@@ -65,7 +65,7 @@ export const ListInput = styled.div`
     position: relative;
     display: flex;
     width: 25vw;
-    margin: 0 10px 0 0;
+    margin: auto;
 `;
 
 export const ListInputContainer = styled.form`
@@ -86,7 +86,7 @@ export const InputField = styled.input`
     border: none;
     border-radius: 2px;
     width: 100%;
-    color: #b7bcdd;
+    color: #000;
     outline: none;
     z-index: 0;
     -webkit-tap-highlight-color: transparent;
@@ -166,7 +166,7 @@ export const UnorderedDoneListComponent = styled.ol`
     }
 `;
 
-export const TodoListComponent = styled.li`
+export const TodoListStyle = styled.li`
     > span {
         background: transparent !important;
         flex: 50%
@@ -177,7 +177,7 @@ export const TodoListComponent = styled.li`
     }
 `;
 
-export const DoneListComponent = styled.li`
+export const DoneListStyle = styled.li`
     > span {
         background: transparent !important;
         flex: 50%
@@ -194,6 +194,7 @@ export const CheckboxComponent = styled.input.attrs({ type: 'checkbox' })`
     background-color: #fff;
     margin: 0 5px;
     font: inherit;
+    cursor: pointer;
     color: currentColor;
     width: 1.15em;
     height: 1.15em;
@@ -219,3 +220,11 @@ export const CheckboxComponent = styled.input.attrs({ type: 'checkbox' })`
         transform: scale(1);
     }
 `;
+
+export const TodoEmptyPlaceholder = styled.div`
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: auto;
+`;
+

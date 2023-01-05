@@ -2,8 +2,10 @@ export const HeaderText = 'Epilot- Todo by Trello';
 export const AddTaskText = 'Add a Task';
 export const TodoText = 'ToDo';
 export const DoneText = 'Done';
-export const SESSION_KEY = 'isLoggedIn';
-export const SESSION_ERROR = 'SESSION key expired please re login';
+export const SessionKey = 'isLoggedIn';
+export const SessionError = 'SESSION key expired please re login';
+export const EmptyDone = 'Do some tasks and mark them done!';
+export const EmptyTodo = 'Great ! no pending tasks';
 
 export const API = {
   LOGIN: 'http://localhost:3000/login',
