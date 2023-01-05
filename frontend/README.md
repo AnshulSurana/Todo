@@ -1,6 +1,6 @@
 # Todo Trello App - Front End
 
-This is Front end application for Epilot Todo app. This is a single page application that
+This is Front end application for Todo app. This is a single page application that
 has an input field to add new task and 2 lists namely Todo List and Done List.
 
 ##Github

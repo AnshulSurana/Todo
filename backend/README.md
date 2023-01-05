@@ -1,6 +1,6 @@
-# Epilot Todo - Trello Backend Api
+# Todo Trello App Backend Api
 
-This Project contains Node API for Epilot Todo App. This service connects with trello via
+This Project contains Node API for Todo App. This service connects with trello via
 exported public trello APIs.
 
 ##Github
@@ -12,8 +12,8 @@ Anshul Surana - surana.anshul@gmail.com
 #Prerequisites
  - Node >= 18
  - NPM >= 8
- - Either, access to Epilot-Todo board on trello, or a new configured trello board with
-  appkey, appname and board name.
+ - Either, access to *Epilot-Todo* board on trello (*https://trello.com/b/u4THNyg7/epilot-todo*), or use a new configured trello board and add
+  appkey, appname and board name in backend/src/appConfig.js.
  - Vacant port 3000
    
 ## Reference Documentation 
