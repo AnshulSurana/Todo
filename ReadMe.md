@@ -13,9 +13,11 @@ This project contains two folders.
     Currently, the app uses public created Board with name - *Epilot-Todo* which have two lists
     *Todo List* and *Done List*. The board is currently being shared with my credentials, in order to use
     the app there are two ways
-    * 1. Use Existing credentials present in appConfig.js file, for that you need to be added to
+    * 1. Use Existing credentials present in backend/src/appConfig.js file, for that you need to be added to
       as a contributor to the board.So, ping me the email id, and I will add you.
-    * 2. Create your own Board and add *appKey*, *appSecret* and *boardName* from Trello in the appConfig.js file.
+    * 2. Create your own Board on Trello 
+         https://trello.com/login 
+         and add *appKey*, *appSecret* and *boardName* from Trello in the appConfig.js file.
     
   
   After configuring Trello, go to backend folder ( cd backend )

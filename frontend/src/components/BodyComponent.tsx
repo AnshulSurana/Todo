@@ -12,7 +12,6 @@ import {
 import {
   AiOutlineSendComponent,
   CheckboxComponent,
-  DoneListComponent,
   FlexComponent,
   G1R1,
   G2R1,
@@ -24,18 +23,20 @@ import {
   LabelStyle,
   ListInput,
   ListInputContainer,
-  TodoListComponent,
   UnorderedDoneListComponent,
   UnorderedListComponent,
-
+  TodoEmptyPlaceholder
 } from './styles';
 import {
-  AddTaskText, TodoText, DoneText, SESSION_KEY, TOAST_MESSAGES, SESSION_ERROR,
+  AddTaskText, TodoText, DoneText, SessionKey, TOAST_MESSAGES, SessionError,
 } from '../contants';
+import { TodoCard, DoneCard } from '../Type';
+import TodoListComponent from './TodoListComponent';
+import DoneListComponent from './DoneListComponent';
 
 const BodyComponent = () => {
-  const [todoCards, setTodoCards] = useState<Array<any>>();
-  const [doneCards, setDoneCards] = useState<Array<any>>();
+  const [todoCards, setTodoCards] = useState<Array<TodoCard>>();
+  const [doneCards, setDoneCards] = useState<Array<DoneCard>>();
   const [taskName, setTaskName] = useState<string>('');
   const dataFetchedRef = useRef(false);
 
@@ -50,8 +51,8 @@ const BodyComponent = () => {
 
   const handleError = (error) => {
     if (error.message === 'invalid id') {
-      window.localStorage.removeItem(SESSION_KEY);
-      toast.error(SESSION_ERROR, { position: toast.POSITION.TOP_RIGHT });
+      window.localStorage.removeItem(SessionKey);
+      toast.error(SessionError, { position: toast.POSITION.TOP_RIGHT });
       setTimeout(() => {
         window.location.reload();
       }, 3000);
@@ -80,7 +81,7 @@ const BodyComponent = () => {
   };
 
   useEffect(() => {
-    if (!dataFetchedRef.current && localStorage.getItem(SESSION_KEY) !== null) {
+    if (!dataFetchedRef.current && localStorage.getItem(SessionKey) !== null) {
       dataFetchedRef.current = true;
       fetchCards();
     }
@@ -132,7 +133,7 @@ const BodyComponent = () => {
         <GridRow>
           <GridColumn>
             <G1R1>
-              <LabelStyle>{ AddTaskText }</LabelStyle>
+              <LabelStyle><span>{ AddTaskText }</span></LabelStyle>
               <ListInput>
                 <ListInputContainer onSubmit={submitTask}>
                   <InputField
@@ -149,26 +150,12 @@ const BodyComponent = () => {
               </ListInput>
             </G1R1>
             <G2R1>
-              <LabelStyle>{ TodoText }</LabelStyle>
-              <UnorderedListComponent data-testid="unorderedTodoListComponent">
-                {todoCards && todoCards.map((card) => (
-                  <TodoListComponent data-testid="todoElements" id={card.id} key={card.id}>
-                    <CheckboxComponent data-testid="checkBoxElement" onChange={(e) => moveTaskToDone(e, card.id)} />
-                    <span>{card.name}</span>
-                  </TodoListComponent>
-                ))}
-              </UnorderedListComponent>
+              <LabelStyle><span>{ TodoText }</span></LabelStyle>
+              <TodoListComponent todoCards={ todoCards } moveTaskToDone={ moveTaskToDone } />
             </G2R1>
             <G3R1>
-              <LabelStyle>{ DoneText }</LabelStyle>
-              <UnorderedDoneListComponent data-testid="unorderedDoneListComponent">
-                {doneCards && doneCards.map((card) => (
-                  <DoneListComponent data-testid="doneElements" key={card.id}>
-                    <span>{card.name}</span>
-                    <AiOutlineDelete data-testid="deleteButtons" onClick={() => deleteCard(card.id)} />
-                  </DoneListComponent>
-                ))}
-              </UnorderedDoneListComponent>
+              <LabelStyle><span>{ DoneText }</span></LabelStyle>
+              <DoneListComponent doneCards={ doneCards } deleteCard={ deleteCard } />
             </G3R1>
           </GridColumn>
         </GridRow>

@@ -1,4 +1,5 @@
 import { parse } from 'url';
+import fetch from 'node-fetch';
 import Authorize from './trelloAuth.js';
 import config from './appConfig.js';
 import logger from "./logger.js";
