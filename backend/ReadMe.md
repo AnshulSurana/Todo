@@ -14,6 +14,7 @@ Anshul Surana - surana.anshul@gmail.com
  - NPM >= 8
  - Either, access to Epilot-Todo board on trello, or a new configured trello board with
   appkey, appname and board name.
+ - Vacant port 3000
    
 ## Reference Documentation 
   - Trello - https://developer.atlassian.com/cloud/trello/rest/api-group-actions/
