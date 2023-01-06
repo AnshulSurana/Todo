@@ -1,4 +1,4 @@
-# Todo APP
+#  Todo Trello APP
 
 Todo app on node and react using trello
 
@@ -14,10 +14,11 @@ This project contains two folders.
     *Todo List* and *Done List*. The board is currently being shared with my credentials, in order to use
     the app there are two ways
     * 1. Use Existing credentials present in backend/src/appConfig.js file, for that you need to be added to
-      as a contributor to the board.So, ping me the email id, and I will add you.
+      as a contributor to the Trello board (*https://trello.com/b/u4THNyg7/epilot-todo*) .So, ping me the email id, and I will add you.
     * 2. Create your own Board on Trello 
          https://trello.com/login 
          and add *appKey*, *appSecret* and *boardName* from Trello in the appConfig.js file.
+         steps in [here](/backend/ReadMe.md).
     
   
   After configuring Trello, go to backend folder ( cd backend )

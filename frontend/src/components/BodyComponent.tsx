@@ -90,14 +90,16 @@ const BodyComponent = () => {
   const submitTask = (e) => {
     e.preventDefault();
     setTaskName('');
-    createNewTask(taskName).then(async (response) => {
-      await handleResponse(response);
-      toast.success(TOAST_MESSAGES.CREATED_TASK_SUCCESS, { position: toast.POSITION.TOP_RIGHT });
-      fetchCards();
-    }).catch((error) => {
-      toast.error(TOAST_MESSAGES.CREATED_TASK_ERROR, { position: toast.POSITION.TOP_RIGHT });
-      handleError(error);
-    });
+    if (taskName.trim() !== '') {
+      createNewTask(taskName).then(async (response) => {
+        await handleResponse(response);
+        toast.success(TOAST_MESSAGES.CREATED_TASK_SUCCESS, { position: toast.POSITION.TOP_RIGHT });
+        fetchCards();
+      }).catch((error) => {
+        toast.error(TOAST_MESSAGES.CREATED_TASK_ERROR, { position: toast.POSITION.TOP_RIGHT });
+        handleError(error);
+      });
+    }
   };
 
   const moveTaskToDone = (e, id) => {
@@ -137,6 +139,7 @@ const BodyComponent = () => {
               <ListInput>
                 <ListInputContainer onSubmit={submitTask}>
                   <InputField
+                    type="text"
                     data-testid="taskInputField"
                     id="taskInput"
                     onChange={(e) => setTaskName(e.target.value)}
