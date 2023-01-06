@@ -18,6 +18,7 @@ This project contains two folders.
     * 2. Create your own Board on Trello 
          https://trello.com/login 
          and add *appKey*, *appSecret* and *boardName* from Trello in the appConfig.js file.
+         steps in [here](/backend/ReadMe.md).
     
   
   After configuring Trello, go to backend folder ( cd backend )

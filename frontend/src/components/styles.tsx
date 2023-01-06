@@ -55,7 +55,7 @@ export const G3R1 = styled.div`
 
 export const LabelStyle = styled.div`
     margin: 10px;
-    font-size: 15px;
+    font-size: 20px;
     align-self: center;
     letter-spacing: 0px;
     font-weight: 600;
@@ -120,7 +120,7 @@ export const AiOutlineSendComponent = styled(AiOutlineSend)`
 `;
 
 export const UnorderedListComponent = styled.ol`
-    font-family: 'Gloria Hallelujah', cursive;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.4rem;
     list-style-position: initial;
     box-shadow: 0.25rem 1.25rem 1.25rem rgb(0 0 0 / 0.15);
@@ -144,7 +144,7 @@ export const UnorderedListComponent = styled.ol`
 `;
 
 export const UnorderedDoneListComponent = styled.ol`
-    font-family: 'Gloria Hallelujah', cursive;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.4rem;
     list-style-position: initial;
     box-shadow: 0.25rem 1.25rem 1.25rem rgb(0 0 0 / 0.15);
@@ -154,8 +154,9 @@ export const UnorderedDoneListComponent = styled.ol`
     
     li {
         border-radius: 10px;
-        padding: 0 0 0 1rem; 
+        padding: 0 0.5rem 0 1rem; 
         margin: 2px;
+        display: list-item;
     }
     & :nth-child(2n) {
         background: white;
@@ -169,7 +170,7 @@ export const UnorderedDoneListComponent = styled.ol`
 export const TodoListStyle = styled.li`
     > span {
         background: transparent !important;
-        flex: 50%
+        flex: 50%;
     }
     > svg {
         background: transparent !important;
@@ -180,12 +181,11 @@ export const TodoListStyle = styled.li`
 export const DoneListStyle = styled.li`
     > span {
         background: transparent !important;
-        flex: 50%
-    }
-    > svg {
-        background: transparent !important;
-        padding: 7px 10px 0px 0px;
-        float: right;
+        flex: 50%;
+        > svg {
+            background: transparent !important;
+            float: right;
+        }
     }
 `;
 

@@ -19,7 +19,9 @@ const DoneListComponent = ({ doneCards, deleteCard }: DoneListProps) => {
                 { doneCards && doneCards.map((card) => (
                     <DoneListStyle data-testid="doneElements" key={card.id}>
                         <span>{card.name}</span>
-                        <AiOutlineDelete data-testid="deleteButtons" onClick={() => deleteCard(card.id)} />
+                        <span>
+                            <AiOutlineDelete data-testid="deleteButtons" onClick={() => deleteCard(card.id)} />
+                        </span>
                     </DoneListStyle>
                 ))}
             </UnorderedDoneListComponent>
